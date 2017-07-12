@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="icmscspuJobPU" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<non-jta-data-source>java:jboss/datasources/appds</non-jta-data-source>
+
+<!-- 		<mapping-file>hk/judiciary/icmscspu/model/courtcase/dao/namedquery/Case.orm.xml</mapping-file> -->
+
+		<properties>
+ 			<property name="eclipselink.composite-unit.member" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

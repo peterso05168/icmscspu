@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="lib" path="/repository/org/springframework/batch/spring-batch-infrastructure/2.2.7.RELEASE/spring-batch-infrastructure-2.2.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/org/springframework/batch/spring-batch-core/2.2.7.RELEASE/spring-batch-core-2.2.7.RELEASE.jar" sourcepath="C:/Users/O_SUMM~1/AppData/Local/Temp/decompiler/source/spring-batch-core-2.2.7.RELEASE-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+	<classpathentry kind="lib" path="/repository/org/springframework/spring-beans/3.2.8.RELEASE/spring-beans-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/jud/framework/fmk-ejb-lib/0.24.0.0/fmk-ejb-lib-0.24.0.0.jar"/>
+	<classpathentry kind="lib" path="/repository/jud/framework/fmk-lib/0.26.0.0/fmk-lib-0.26.0.0.jar"/>
+	<classpathentry kind="lib" path="/repository/jud/framework/fmk-batch/0.7.0.0/fmk-batch-0.7.0.0.jar"/>
+	<classpathentry kind="lib" path="/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/jud/entity-lib/icms-entity-lib/0.2.9.189_ICMS-SNAPSHOT-201706210953/icms-entity-lib-0.2.9.189_ICMS-SNAPSHOT-201706210953.jar"/>
+	<classpathentry kind="lib" path="/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/icmssvdws-stub"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

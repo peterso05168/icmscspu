@@ -1,0 +1,30 @@
+WSDL Link:
+http://localhost:8080/reference-webservice-web/services/ProjectService-0.1.0.0?wsdl
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:proj="http://project.webservice.reference.judiciary.hk/">
+   <soapenv:Header>
+   <wsheader>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;java version="1.8.0_92" class="java.beans.XMLDecoder">
+ &lt;object class="hk.judiciary.fmk.common.webservice.WebserviceHeader">
+  &lt;void property="loginName">
+   &lt;string>icmspay_user005&lt;/string>
+  &lt;/void>
+  &lt;void property="organisationName">
+   &lt;string>Judiciary&lt;/string>
+  &lt;/void>
+  &lt;void property="projectCode">
+   &lt;string>ICMSPAY&lt;/string>
+  &lt;/void>
+  &lt;void property="token">
+   &lt;string>PJWABqU3Kr0y/q2vkh2plO5JpOT2aHwoin4F69w0vH0wHzh3f/8YOp0V1qdRFs3JBc8ewaN41I37uRa1J45c54YemTOD4ARcIRfHkumPr6ItNzU85rxp9VDL1j0uaGbetQA6UHxE1qgnUisH53W3geYIt+VOvDu3JKjF7TZSXEUmSFu904dE3Yrsqnxvo+bGAlrBce+5X+a/16QxTtVI35nd7w7Hc1lwU0n0CVcMXwEgZ04fw2Yx4Xf1OpEyqaQIsTLcmwC7Ht7h/kKyxot7shPC7iLZPEc9JxJPSBzEi0NnKT8zoujgRIfvrrk8fB3KUSCsz0758ccnz9wNWJnr7w==&lt;/string>
+  &lt;/void>
+ &lt;/object>
+&lt;/java>
+</wsheader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <proj:getProject>
+         <active>true</active>
+      </proj:getProject>
+   </soapenv:Body>
+</soapenv:Envelope>

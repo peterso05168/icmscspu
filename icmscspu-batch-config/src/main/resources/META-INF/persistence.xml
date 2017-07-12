@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+
+	<persistence-unit name="icmscspuPU" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<non-jta-data-source>java:jboss/datasources/appds</non-jta-data-source>
+
+<!-- 		<jar-file>reference-flex-entity-lib-1.0.jar</jar-file> -->
+		<jar-file>icms-entity-lib-0.2.9.189_ICMS-SNAPSHOT-201706210953.jar</jar-file>
+		<jar-file>icmscspu-batch.jar</jar-file>
+
+		<properties>
+			<property name="jboss.entity.manager.jndi.name" value="java:jboss/persistence/icmscspuPU" />
+			<property name="eclipselink.target-database"
+				value="org.eclipse.persistence.platform.database.oracle.Oracle11Platform" />
+			<property name="eclipselink.target-server" value="JBoss" />
+			<property name="eclipselink.weaving" value="false" />
+			<property name="eclipselink.composite-unit" value="true" />
+			<property name="eclipselink.session.customizer"
+				value="hk.judiciary.fmk.batch.dao.entity.DefaultBatchEntityInterceptor" />
+		</properties>
+	</persistence-unit>
+</persistence>

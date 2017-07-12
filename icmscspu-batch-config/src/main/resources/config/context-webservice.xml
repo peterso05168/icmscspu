@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+						http://cxf.apache.org/jaxws 
+						http://cxf.apache.org/schemas/jaxws.xsd">
+
+
+	<jaxws:endpoint xmlns:tns="http://internal.server.webservice.batch.fmk.judiciary.hk/"
+		id="fmkbatchserver" 
+		implementor="hk.judiciary.fmk.batch.webservice.server.internal.FmkBatchServerImpl"
+	    address="/ReferenceBatchApp-0.1.0.0">
+
+		<!-- Cert Auth -->
+		<jaxws:inInterceptors>
+			<ref bean="wSSecurityInterceptor"/>
+		</jaxws:inInterceptors>
+
+		<!-- Basic Auth -->
+		<!-- <jaxws:inInterceptors>
+			<ref bean="wSS4JInInterceptor"/>
+			<ref bean="wSInboundHeaderInterceptor"/>
+		</jaxws:inInterceptors> -->
+
+<!-- 		<jaxws:handlers>
+			<bean class="org.jboss.jbossts.txbridge.inbound.OptionalJaxWSTxInboundBridgeHandler"/>
+			<bean class="com.arjuna.mw.wst11.service.JaxWSHeaderContextProcessor"/>
+		</jaxws:handlers> -->
+	</jaxws:endpoint>
+	
+
+</beans>

@@ -1,0 +1,46 @@
+package hk.judiciary.icmssvd.model.webservice;
+
+import java.util.List;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+
+import hk.judiciary.icmssvd.model.snGeneration.biz.dto.PrintCheckListAndCoverSheetResultDTO;
+import hk.judiciary.icmssvd.model.snGeneration.biz.dto.PrintFreshSummonsResultDTO;
+
+
+
+@WebService(targetNamespace = SnGenerationService.NAMESPACE)
+@SOAPBinding(style = Style.RPC)
+public interface SnGenerationService {
+
+	public static final String WEBSERV_CD = "SnGenerationWS";
+	
+	static final String NAMESPACE = "http://webservice.icmssvd.judiciary.hk/";
+	
+	@WebResult(name = "batchGenSummons", targetNamespace = NAMESPACE)
+	@WebMethod PrintFreshSummonsResultDTO batchGenSummons(
+			@WebParam(name = "caseId") Integer caseId,
+			@WebParam(name = "copyType") String copyType,
+			@WebParam(name = "caseTypeCode") String caseTypeCode,
+			@WebParam(name = "jobNo") String jobNo,
+			@WebParam(name = "isReservice") Boolean isReservice,
+			@WebParam(name = "totalCaseCount") String totalCaseCount,
+			@WebParam(name = "totalPageCount") String totalPageCount
+			);
+	
+	@WebResult(name = "batchGenCheckList", targetNamespace = NAMESPACE)
+	@WebMethod PrintCheckListAndCoverSheetResultDTO batchGenCheckList(
+			@WebParam(name = "caseIds") List<Integer> caseIds,
+			@WebParam(name = "caseTypeCode") String caseTypeCode
+			);
+	
+	@WebResult(name = "batchGenCover", targetNamespace = NAMESPACE)
+	@WebMethod PrintCheckListAndCoverSheetResultDTO batchGenCover(
+			@WebParam(name = "caseIds") List<String> caseNos
+			);
+}
